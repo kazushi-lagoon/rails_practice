@@ -1,0 +1,36 @@
+en:
+  Title: Title
+  Memo: Memo
+  Author: Author
+  Picture: Picture
+  Show: Show
+  Edit: Edit
+  Destroy: Destroy
+  New: New
+  Back: Back
+
+  books:
+    index: 
+      title: Books
+      notice: 'Book was successfully saved.'
+    new:
+      title: New Book
+    show: 
+      title: Book Information
+    edit: 
+      title: Edit
+    create:
+      success: Book was successfully created.
+    update:
+      success: Book was successfully updated.
+    destroy:
+      success: Book was successfully destroyed.
+
+  helpers:
+    submit:
+      create: create
+      update: update
+      submit: save
+      model_name:
+        create: send
+        update: change
