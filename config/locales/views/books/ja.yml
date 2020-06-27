@@ -1,0 +1,36 @@
+ja:
+  Title: タイトル
+  Memo: メモ
+  Author: 著者
+  Picture: 画像
+  Show: 詳細
+  Edit: 編集
+  Destroy: 削除
+  New: 追加
+  Back: 戻る
+
+  books:
+    index: 
+      title: 本一覧
+      notice: 追加しました！
+    new:
+      title: 追加
+    show: 
+      title: 詳細情報
+    edit: 
+      title: 本情報の編   
+    create:
+      success: 追加しました！
+    update:
+      success: 変更しました！
+    destroy:
+      success: 削除しました！
+
+  helpers:
+    submit:
+      create: 追加する
+      update: 更新する
+      submit: 保存する
+      model_name:
+        create: 送る
+        update: 変える

@@ -9,6 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <% if I18n.locale.to_s == "en" %>
+      <%= link_to('日本語', :locale => 'ja') %>
+    <% else %>
+      <%= link_to('English', :locale => 'en') %>
+    <% end %>
+  </header>
+
   <body>
     <%= yield %>
   </body>
