@@ -1,26 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= t :Title %>:</strong>
+  <strong>Title:</strong>
   <%= @book.title %>
 </p>
 
 <p>
-  <strong><%= t :Memo %>:</strong>
+  <strong>Memo:</strong>
   <%= @book.memo %>
 </p>
 
 <p>
-  <strong><%= t :Author %>:</strong>
+  <strong>Author:</strong>
   <%= @book.author %>
 </p>
 
 <p>
-  <strong><%= t :Picture %>:</strong>
+  <strong>Picture:</strong>
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
-<% edit = t :Edit %>
-<% back = t :Back %>
-<%= link_to "#{edit}", edit_book_path(@book) %> |
-<%= link_to "#{back}", books_path %>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

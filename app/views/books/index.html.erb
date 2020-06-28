@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('.title') %></h1>
+<h1>Books</h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= t :Title %></th>
-      <th><%= t :Memo %></th>
-      <th><%= t :Author %></th>
-      <th><%= t :Picture %></th>
+      <th>Title</th>
+      <th>Memo</th>
+      <th>Author</th>
+      <th>Picture</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,12 +20,9 @@
         <td><%= book.memo %></td>
         <td><%= book.author %></td>
         <td><%= book.picture %></td>
-        <% show = t :Show %>
-        <% edit = t :Edit %>
-        <% destroy = t :Destroy %>
-        <td><%= link_to "#{show}", book %></td>
-        <td><%= link_to "#{edit}", edit_book_path(book) %></td>
-        <td><%= link_to "#{destroy}", book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,5 +30,4 @@
 
 <br>
 
-<% new = t :New %>
-<%= link_to "#{new}", new_book_path %>
+<%= link_to 'New Book', new_book_path %>
