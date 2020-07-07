@@ -28,37 +28,31 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
 
-    respond_to do |format|
-      if @book.save
-        success = t(".success")
-        format.html { redirect_to @book, notice: success }
-      else
-        format.html { render :new }
-      end
+    if @book.save
+      success = t(".success")
+      redirect_to @book, notice: success
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
-    respond_to do |format|
-      if @book.update(book_params)
-        success = t(".success")
-        format.html { redirect_to @book, notice: success }
-      else
-        format.html { render :edit }
-      end
-    end
+    if @book.update(book_params)
+      success = t(".success")
+      redirect_to @book, notice: success
+    else
+      render :edit
+    end  
   end
 
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
     @book.destroy
-    respond_to do |format|
-      success = t(".success")
-      format.html { redirect_to books_url, notice: success }
-    end
+    success = t(".success")
+    redirect_to books_url, notice: success
   end
 
   private
