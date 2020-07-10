@@ -44,7 +44,7 @@ class BooksController < ApplicationController
       redirect_to @book, notice: success
     else
       render :edit
-    end  
+    end
   end
 
   # DELETE /books/1
